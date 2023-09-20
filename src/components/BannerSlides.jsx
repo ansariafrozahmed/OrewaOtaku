@@ -44,7 +44,7 @@ const BannerSlides = () => {
                 {
                     images.map((item, index) => (
                         <div key={index}>
-                            <div className='bg-center h-[60vh] lg:h-[75vh] bg-cover' style={{ backgroundImage: `url(${item.url})` }}>
+                            <div className='bg-top h-[70vh] lg:h-[75vh] bg-cover' style={{ backgroundImage: `url(${item.url})` }}>
                                 <div className='h-full lg:w-[70%] bg-gradient-to-t from-black md:bg-gradient-to-r md:from-black lg:bg-gradient-to-r lg:from-black'>
                                     <div className='h-full lg:w-[70%] lg:pr-72 w-full flex flex-col items-center lg:items-start lg:justify-center justify-end leading-tight px-10 pb-5'>
                                         <h2 className=' text-[2.5rem] lg:text-[3rem] font-bold text-[#FFDD95] lg:mb-2'>{item.title}</h2>
