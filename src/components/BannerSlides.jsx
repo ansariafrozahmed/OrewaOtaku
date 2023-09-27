@@ -2,6 +2,7 @@ import React from 'react'
 import 'react-slideshow-image/dist/styles.css'
 import { Fade } from 'react-slideshow-image'
 import { AiFillStar } from 'react-icons/ai'
+import { BsCollectionPlay } from 'react-icons/bs'
 
 const BannerSlides = () => {
 
@@ -40,20 +41,20 @@ const BannerSlides = () => {
 
     return (
         <div className=''>
-            <Fade arrows={false} duration={3000} autoplay={true} infinite={true}>
+            <Fade arrows={false} duration={2000} autoplay={true} infinite={true}>
                 {
                     images.map((item, index) => (
                         <div key={index}>
-                            <div className='bg-top h-[70vh] lg:h-[75vh] bg-cover' style={{ backgroundImage: `url(${item.url})` }}>
+                            <div className='bg-top h-[70vh] lg:h-[90vh] bg-cover' style={{ backgroundImage: `url(${item.url})` }}>
                                 <div className='h-full lg:w-[70%] bg-gradient-to-t from-black md:bg-gradient-to-r md:from-black lg:bg-gradient-to-r lg:from-black'>
                                     <div className='h-full lg:w-[70%] lg:pr-72 w-full flex flex-col items-center lg:items-start lg:justify-center justify-end leading-tight px-10 pb-5'>
                                         <h2 className=' text-[2.5rem] lg:text-[3rem] font-bold text-[#FFDD95] lg:mb-2'>{item.title}</h2>
-                                        <div className='hidden lg:block lg:flex items-center gap-1 lg:mb-1 animate-bounce'>
+                                        <div className='hidden lg:flex items-center gap-1 lg:mb-1 animate-pulse'>
                                             <AiFillStar size={25} color='gold' />
                                             <span className='text-[1.1rem] font-sans '>{item.rating}</span>
                                         </div>
                                         <p className='leading-snug text-center lg:text-left text-[1rem] lg:text-[1.2rem] line-clamp-3 lg:line-clamp-4'>{item.desc}</p>
-                                        <a className='border-2 border-[#FFDD95] bg-[#FFDD95] text-black font-semibold mt-2 lg:mt-5 px-5 py-2 rounded-xl ' href="" target='_blank'>Know More..</a>
+                                        <a className='border-2 border-[#FFDD95] bg-transparent text-[#FFDD95] transition-all ease-in-out duration-500 font-semibold mt-2 lg:mt-5 px-5 py-2 rounded-xl flex items-center gap-3 hover:bg-[#FFDD95] hover:text-[#000] hover:scale-110 ' href="" target='_blank'>Watch <BsCollectionPlay /></a>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +62,7 @@ const BannerSlides = () => {
                     ))
                 }
             </Fade>
-        </div>
+        </div >
     )
 }
 

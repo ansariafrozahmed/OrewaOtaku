@@ -17,7 +17,7 @@ body {
   color: #fff;
 }
 
-.banner-slide::before {
+/* .banner-slide::before {
   content: '';
   position: absolute;
   overflow: hidden;
@@ -27,6 +27,5 @@ body {
   height: 100%;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   /* Gradient from black to transparent */
-  z-index: 1;
-  /* Place the gradient above the image */
-}
+/* z-index: 1; */
+/* Place the gradient above the image */
