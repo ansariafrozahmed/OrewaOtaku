@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import TopAiringCard from './TopAiringCard'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import TopCharCard from './TopCharCard';
 
-const TopAiringSlider = () => {
+const TopCharSlider = () => {
 
-    const [topAiringData, setTopAiringData] = useState()
+    const [topCharData, setTopCharData] = useState()
 
-    const topAiringFetch = async () => {
-        const res = await fetch('https://api.jikan.moe/v4/top/anime?filter=bypopularity&limit=20')
+    const topCharFetch = async () => {
+        const res = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity&limit=20')
         const data = await res.json()
         const final = data.data
-        setTopAiringData(final)
+        // console.log(final);
+        setTopCharData(final)
     }
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            topAiringFetch()
+            topCharFetch()
         }, 1000);
         return () => clearTimeout(timer);
     }, [])
@@ -61,8 +62,8 @@ const TopAiringSlider = () => {
         <div className='w-full'>
             <Slider {...settings} >
                 {
-                    topAiringData?.map((item, index) => (
-                        <TopAiringCard key={index} image={item.images} name={item.title} type={item.type} />
+                    topCharData?.map((item, index) => (
+                        <TopCharCard key={index} image={item.images} name={item.title} type={item.type} />
                     ))
                 }
             </Slider>
@@ -70,4 +71,4 @@ const TopAiringSlider = () => {
     )
 }
 
-export default TopAiringSlider
+export default TopCharSlider
