@@ -7,12 +7,14 @@ import "slick-carousel/slick/slick-theme.css";
 const TopAiringSlider = () => {
 
     const [topAiringData, setTopAiringData] = useState()
+    const [isLoading, setIsLoading] = useState(true)
 
     const topAiringFetch = async () => {
         const res = await fetch('https://api.jikan.moe/v4/top/anime?filter=bypopularity&limit=20')
         const data = await res.json()
         const final = data.data
         setTopAiringData(final)
+        setIsLoading(false)
     }
 
     useEffect(() => {
@@ -49,8 +51,8 @@ const TopAiringSlider = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToShow: 2,
+                    slidesToScroll: 2
                 }
             }
         ]
@@ -59,6 +61,7 @@ const TopAiringSlider = () => {
 
     return (
         <div className='w-full'>
+            {isLoading && <img className='h-[100px]' src='src\assets\loading.svg'></img>}
             <Slider {...settings} >
                 {
                     topAiringData?.map((item, index) => (

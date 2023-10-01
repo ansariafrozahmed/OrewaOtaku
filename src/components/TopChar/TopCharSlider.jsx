@@ -7,13 +7,14 @@ import TopCharCard from './TopCharCard';
 const TopCharSlider = () => {
 
     const [topCharData, setTopCharData] = useState()
+    const [isLoading, setIsLoading] = useState(true)
 
     const topCharFetch = async () => {
         const res = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity&limit=20')
         const data = await res.json()
         const final = data.data
-        // console.log(final);
         setTopCharData(final)
+        setIsLoading(false)
     }
 
     useEffect(() => {
@@ -50,8 +51,8 @@ const TopCharSlider = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToShow: 2,
+                    slidesToScroll: 2
                 }
             }
         ]
@@ -60,6 +61,7 @@ const TopCharSlider = () => {
 
     return (
         <div className='w-full'>
+            {isLoading && <img className='h-[100px]' src='src\assets\loading.svg'></img>}
             <Slider {...settings} >
                 {
                     topCharData?.map((item, index) => (
