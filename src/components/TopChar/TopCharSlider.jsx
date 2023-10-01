@@ -65,7 +65,7 @@ const TopCharSlider = () => {
             <Slider {...settings} >
                 {
                     topCharData?.map((item, index) => (
-                        <TopCharCard key={index} image={item.images} name={item.title} type={item.type} />
+                        <TopCharCard key={index} rank={index + 1} image={item.images} name={item.title} type={item.type} />
                     ))
                 }
             </Slider>

@@ -65,7 +65,7 @@ const TopAiringSlider = () => {
             <Slider {...settings} >
                 {
                     topAiringData?.map((item, index) => (
-                        <TopAiringCard key={index} image={item.images} name={item.title} type={item.type} />
+                        <TopAiringCard key={index} rank={index + 1} image={item.images} name={item.title} type={item.type} />
                     ))
                 }
             </Slider>
