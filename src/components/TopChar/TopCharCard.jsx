@@ -2,9 +2,9 @@ import React from "react";
 
 const TopCharCard = ({ image, name, type, rank }) => {
     return (
-        <div className="relative w-[95%] cursor-pointer active:cursor-grabbing mr-10 overflow-hidden">
+        <div className="relative w-[95%] cursor-pointer active:cursor-grabbing mr-10 transition-all ease-in-out overflow-hidden hover:scale-95">
             <div
-                className="w-full h-[250px] lg:h-[330px] bg-cover "
+                className="w-full h-[250px] lg:h-[330px] bg-cover  "
                 style={{ backgroundImage: `url(${image.webp.large_image_url})` }}
             >
                 <div className="absolute -left-10 lg:-left-10 -top-8 h-16 w-16">

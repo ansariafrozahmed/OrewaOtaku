@@ -9,7 +9,7 @@ import SocialMedia from '../components/SocialMedia'
 const Home = () => {
     return (
         <div className='pt-5 lg:pt-0 '>
-            <SocialMedia />
+            {/* <SocialMedia /> */}
             <BannerSlides />
             <TopAiring />
             <TopChar />

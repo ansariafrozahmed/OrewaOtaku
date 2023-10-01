@@ -2,7 +2,7 @@ import React from 'react'
 
 const TopAiringCard = ({ image, name, type, rank }) => {
     return (
-        <div className="relative w-[95%] cursor-pointer active:cursor-grabbing mr-10 overflow-hidden">
+        <div className="relative w-[95%] cursor-pointer transition-all ease-in-out overflow-hidden active:scale-90">
             <div
                 className="w-full h-[250px] lg:h-[330px] bg-cover "
                 style={{ backgroundImage: `url(${image.webp.large_image_url})` }}
