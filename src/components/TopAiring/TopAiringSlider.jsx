@@ -61,7 +61,7 @@ const TopAiringSlider = () => {
 
     return (
         <div className='w-full'>
-            {isLoading && <img className='h-[100px]' src='src\assets\loading.svg'></img>}
+            {isLoading && <img className='h-[100px]' src='https://svgshare.com/i/y72.svg'></img>}
             <Slider {...settings} >
                 {
                     topAiringData?.map((item, index) => (

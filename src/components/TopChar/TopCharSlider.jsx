@@ -20,7 +20,7 @@ const TopCharSlider = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             topCharFetch()
-        }, 1000);
+        }, 2000);
         return () => clearTimeout(timer);
     }, [])
 
@@ -61,7 +61,7 @@ const TopCharSlider = () => {
 
     return (
         <div className='w-full'>
-            {isLoading && <img className='h-[100px]' src='src\assets\loading.svg'></img>}
+            {isLoading && <img className='h-[100px]' src='https://svgshare.com/i/y72.svg'></img>}
             <Slider {...settings} >
                 {
                     topCharData?.map((item, index) => (
