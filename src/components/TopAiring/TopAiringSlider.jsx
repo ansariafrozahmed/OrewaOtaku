@@ -30,6 +30,7 @@ const TopAiringSlider = () => {
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 5,
+        draggable: false,
         arrows: true,
         responsive: [
             {
