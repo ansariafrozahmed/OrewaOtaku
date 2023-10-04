@@ -10,10 +10,11 @@ const TopAiringSlider = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     const topAiringFetch = async () => {
-        const res = await fetch('https://api.jikan.moe/v4/top/anime?filter=bypopularity&limit=20')
+        const res = await fetch('https://api.jikan.moe/v4/top/anime?filter=bypopularity&limit=24')
         const data = await res.json()
         const final = data.data
         setTopAiringData(final)
+        // console.log(topAiringData)
         setIsLoading(false)
     }
 
@@ -29,7 +30,7 @@ const TopAiringSlider = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 5,
+        slidesToScroll: 3,
         draggable: false,
         arrows: true,
         responsive: [

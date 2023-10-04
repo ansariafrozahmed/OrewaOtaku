@@ -10,7 +10,7 @@ const TopCharSlider = () => {
 
   const topCharFetch = async () => {
     const res = await fetch(
-      "https://api.jikan.moe/v4/top/manga?filter=bypopularity&limit=20"
+      "https://api.jikan.moe/v4/top/manga?filter=bypopularity&limit=24"
     );
     const data = await res.json();
     const final = data.data;
@@ -30,7 +30,7 @@ const TopCharSlider = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 5,
+    slidesToScroll: 3,
     draggable: false,
     arrows: true,
     responsive: [

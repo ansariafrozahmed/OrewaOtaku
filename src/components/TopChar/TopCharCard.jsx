@@ -47,7 +47,7 @@ const TopCharCard = ({ image, name, type, rank }) => {
         }}
         width={1000}
       >
-        <ModalContent />
+        <ModalContent image={image.webp.large_image_url} />
       </Modal>
     </>
   );
