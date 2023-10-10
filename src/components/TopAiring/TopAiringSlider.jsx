@@ -21,7 +21,7 @@ const TopAiringSlider = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             topAiringFetch()
-        }, 1000);
+        }, 300);
         return () => clearTimeout(timer);
     }, [])
 
@@ -30,7 +30,7 @@ const TopAiringSlider = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 3,
+        slidesToScroll: 2,
         draggable: false,
         arrows: true,
         responsive: [

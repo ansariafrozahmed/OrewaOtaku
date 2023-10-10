@@ -21,7 +21,7 @@ const TopCharSlider = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       topCharFetch();
-    }, 2000);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
