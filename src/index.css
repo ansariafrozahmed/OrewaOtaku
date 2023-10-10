@@ -42,7 +42,7 @@ body {
 
 .slick-prev:before,
 .slick-next:before {
-  font-family: 'slick';
+  font-family: '';
   font-size: 25px;
   line-height: 0;
   color: #FFDD95;
@@ -64,7 +64,7 @@ body {
 .ant-modal .ant-modal-title {
   background-color: #2c281f;
   color: #FFDD95;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   margin-bottom: 30px;
 }

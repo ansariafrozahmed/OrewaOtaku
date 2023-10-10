@@ -17,7 +17,7 @@ const TopAiringCard = ({ image, name, type, rank }) => {
   return (
     <>
       <div
-        className="relative w-[92%] cursor-pointer active:cursor-grabbing transition-all ease-in-out overflow-hidden active:scale-90"
+        className="relative w-[95%] cursor-pointer active:cursor-grabbing transition-all ease-in-out overflow-hidden active:scale-90"
         onClick={showModal}
       >
         <div
@@ -38,7 +38,7 @@ const TopAiringCard = ({ image, name, type, rank }) => {
       </div>
       {/* Modal Code */}
       <Modal
-        title={name}
+        title={`More About... ${name}`}
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
