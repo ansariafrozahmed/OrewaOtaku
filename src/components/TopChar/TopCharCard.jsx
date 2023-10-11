@@ -21,7 +21,7 @@ const TopCharCard = ({ image, name, type, rank }) => {
         onClick={showModal}
       >
         <div
-          className="w-full h-[250px] lg:h-[320px] bg-cover "
+          className="w-full h-[250px] lg:h-[320px] bg-cover  transition-all ease-in-out duration-500 hover:scale-105"
           style={{ backgroundImage: `url(${image.webp.large_image_url})` }}
         >
           {/* <div className="absolute -left-10 lg:-left-10 -top-8 h-16 w-16">

@@ -17,11 +17,11 @@ const TopAiringCard = ({ image, name, type, rank }) => {
   return (
     <>
       <div
-        className="relative w-[95%] cursor-pointer active:cursor-grabbing transition-all ease-in-out overflow-hidden active:scale-90"
+        className="relative w-[95%] cursor-pointer active:cursor-grabbing transition-all ease-in-out  active:scale-90"
         onClick={showModal}
       >
         <div
-          className="w-full h-[250px] lg:h-[320px] bg-cover "
+          className="w-full h-[250px] lg:h-[320px] bg-cover transition-all ease-in-out duration-500 hover:scale-105 "
           style={{ backgroundImage: `url(${image.webp.large_image_url})` }}
         >
           {/* <img className="h-full w-full" src={image.webp.large_image_url} alt={name} /> */}
