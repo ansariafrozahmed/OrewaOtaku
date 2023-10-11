@@ -34,17 +34,17 @@ const Header = () => {
             </div>
 
             <nav>
-                <ul className='flex gap-5 lg:gap-8'>
+                <ul className='flex items-center justify-center gap-5 lg:gap-5'>
                     {
                         navMenu.map(item => (
-                            <li key={item.id} className='upp text-[1rem] font-normal tracking-widest hover:text-[#FFDD95]'>
+                            <li key={item.id} className='upp text-[0.9rem] font-normal tracking-widest hover:text-[#FFDD95] hover:border-b-2 border-transparent hover:border-white transition-all ease-in-out duration-300'>
                                 <Link to={item.link}>{item.label}</Link>
                             </li>
                         ))
                     }
                     <div className='flex items-center justify-center'>
                         <Link to={'/search'}>
-                            <BiSearchAlt size={25} color='#FFDD95' />
+                            <BiSearchAlt size={30} color='#FFDD95' className='transition-all ease-in-out duration-500 hover:scale-125' />
                         </Link>
                     </div>
                 </ul>
