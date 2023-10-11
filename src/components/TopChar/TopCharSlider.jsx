@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TopCharCard from "./TopCharCard";
+import { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import SkeletonLoader from "../SkeletonLoader";
 
 const TopCharSlider = () => {
   const [topCharData, setTopCharData] = useState();
@@ -21,7 +24,7 @@ const TopCharSlider = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       topCharFetch();
-    }, 500);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -62,20 +65,23 @@ const TopCharSlider = () => {
 
   return (
     <div className="w-full">
-      {isLoading && (
-        <img className="h-[100px]" src="https://svgshare.com/i/y72.svg"></img>
-      )}
-      <Slider {...settings}>
-        {topCharData?.map((item, index) => (
-          <TopCharCard
-            key={index}
-            rank={index + 1}
-            image={item.images}
-            name={item.title}
-            type={item.type}
-          />
-        ))}
-      </Slider>
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        {isLoading ? (
+          <SkeletonLoader />
+        ) : (
+          <Slider {...settings}>
+            {topCharData?.map((item, index) => (
+              <TopCharCard
+                key={index}
+                rank={index + 1}
+                image={item.images}
+                name={item.title}
+                type={item.type}
+              />
+            ))}
+          </Slider>
+        )}
+      </SkeletonTheme>
     </div>
   );
 };
