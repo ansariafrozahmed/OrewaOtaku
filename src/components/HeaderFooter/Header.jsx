@@ -26,7 +26,7 @@ const Header = () => {
         },
     ]
     return (
-        <div className='flex flex-col lg:flex-row items-center justify-between lg:px-20 lg:pb-0 text-[white] '>
+        <div className='flex flex-col lg:flex-row items-center justify-between lg:px-20 lg:pb-0 text-[white] bg-gradient-to-b from-[#181408]'>
             <div className='py-2'>
                 <Link to={'/'}>
                     <h2 className='font-logoFont text-[2.5rem] text-[#FFDD95] tracking-wide '>OrewaOtaku</h2>
