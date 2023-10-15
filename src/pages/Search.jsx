@@ -67,7 +67,7 @@ const Search = () => {
                         )
                             :
                             (
-                                <div className="flex flex-wrap justify-start gap-2 mt-5 w-full">
+                                <div className="flex flex-wrap justify-start gap-[2%] mt-5 w-full">
                                     {searchData.map((item, index) => (
                                         <SearchCardSection key={index} name={item.title} image={item.images.webp.large_image_url} type={item.type} />
                                     ))}
