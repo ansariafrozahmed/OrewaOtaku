@@ -28,7 +28,9 @@ const Search = () => {
     const inputSearch = (e) => {
         if (e.key === "Enter") {
             searchApiFunc(e.target.value);
+            setSearchText(e.target.value)
             e.target.value = "";
+            setIsLoading(true)
         }
     };
 
