@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import SkeletonLoader from "../SkeletonLoader";
+import SkeletonLoader from "../Skeleton/SkeletonLoader";
 
 const TopAiringSlider = () => {
     const [topAiringData, setTopAiringData] = useState();

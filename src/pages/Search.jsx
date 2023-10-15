@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import SearchCardSection from "../components/SearchCardSection";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import SkeletonLoader from "../components/SkeletonLoader";
+// import SkeletonLoader from "../components/Skeleton/SkeletonLoader";
+import SearchSkeleton from "../components/Skeleton/SearchSkeleton";
 
 const Search = () => {
     const [searchText, setSearchText] = useState("Jujutsu Kaisen");
@@ -55,11 +56,11 @@ const Search = () => {
                 <SkeletonTheme baseColor="#202020" highlightColor="#444">
                     {
                         isLoading ? (
-                            <SkeletonLoader />
+                            <SearchSkeleton />
                         )
                             :
                             (
-                                <div className="flex flex-wrap justify-between gap-[0px] mt-5 w-full">
+                                <div className="flex flex-wrap justify-start gap-2 mt-5 w-full">
                                     {searchData.map((item, index) => (
                                         <SearchCardSection key={index} name={item.title} image={item.images.webp.large_image_url} type={item.type} />
                                     ))}

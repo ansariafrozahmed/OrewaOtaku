@@ -7,7 +7,7 @@ import Footer from "../components/HeaderFooter/Footer";
 
 const Home = () => {
     return (
-        <div className="pt-5 lg:pt-0 ">
+        <div className="pt-5 lg:pt-0 overflow-hidden">
             {/* <SocialMedia /> */}
             <BannerSlides />
             <TopAiring />

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import TopCharCard from "./TopCharCard";
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import SkeletonLoader from "../SkeletonLoader";
+import SkeletonLoader from "../Skeleton/SkeletonLoader";
 
 const TopCharSlider = () => {
   const [topCharData, setTopCharData] = useState();

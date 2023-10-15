@@ -21,9 +21,10 @@ const TopCharCard = ({ image, name, type, rank }) => {
         onClick={showModal}
       >
         <div
-          className="w-full h-[250px] lg:h-[320px] bg-cover  transition-all ease-in-out duration-500 hover:scale-105"
-          style={{ backgroundImage: `url(${image.webp.large_image_url})` }}
+          className="w-full aspect-[3/4.5]  transition-all ease-in-out duration-500 hover:scale-105"
+        // style={{ backgroundImage: `url(${image.webp.large_image_url})` }}
         >
+          <img className="h-full w-full object-cover" src={image.webp.large_image_url} alt={name} />
           {/* <div className="absolute -left-10 lg:-left-10 -top-8 h-16 w-16">
             <div className="absolute transform -rotate-45 font-sans border-b-4 border-black bg-[#FF0000] text-center shadow-xl text-[0.9rem] text-white font-semibold left-[-34px] top-[32px] w-[170px]">
               {"#" + rank}
