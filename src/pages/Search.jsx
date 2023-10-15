@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SearchCardSection from "../components/SearchCardSection";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-// import SkeletonLoader from "../components/Skeleton/SkeletonLoader";
+import { motion } from "framer-motion";
 import SearchSkeleton from "../components/Skeleton/SearchSkeleton";
 
 const Search = () => {
@@ -42,7 +42,12 @@ const Search = () => {
     }, [searchText]);
 
     return (
-        <div className="h-auto w-full mt-2">
+        <motion.div className="h-auto w-full mt-2"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            // exit={{ scale: 0.5, opacity: 0 }}
+            transition={{ type: "spring", duration: 0.5 }}
+        >
             <div className="h-auto w-full flex items-center justify-center py-4 ">
                 <input
                     type="search"
@@ -71,7 +76,7 @@ const Search = () => {
                     }
                 </SkeletonTheme>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
