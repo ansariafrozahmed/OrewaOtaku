@@ -9,7 +9,7 @@ import Footer from "../components/HeaderFooter/Footer";
 const Home = () => {
     return (
         <motion.div
-            className="pt-5 lg:pt-0 overflow-hidden"
+            className="pt-5 lg:pt-0 "
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             // exit={{ scale: 0.5, opacity: 0 }}

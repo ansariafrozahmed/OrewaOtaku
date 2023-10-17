@@ -18,6 +18,11 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  color: #000;
+  background-color: #FFDD95;
+}
+
 .animatedtext {
   padding: 10px 0;
   background: linear-gradient(to right, hsl(0, 0%, 30%) 0, #FFDD95 10%, hsl(0, 0%, 30%) 20%);
