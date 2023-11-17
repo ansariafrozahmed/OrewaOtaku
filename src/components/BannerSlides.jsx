@@ -3,10 +3,23 @@ import "react-slideshow-image/dist/styles.css";
 import { Fade } from "react-slideshow-image";
 import { AiFillStar } from "react-icons/ai";
 import { BsCollectionPlay } from "react-icons/bs";
+import { useState, useEffect } from "react";
 
 const BannerSlides = () => {
 
-    //Logo Images Are Stored At https://imgbb.com/
+    const [bannerImageData, setBannerImageData] = useState()
+
+    const BannerImageFetchFunc = async () => {
+        const url = await fetch('https://sagartech.online/ansariafroz/wp-json/wp/v2/bannerslide?acf_format=standard&_fields=id,title,acf')
+        const res = await url.json()
+        // console.log(res)
+        setBannerImageData(res)
+        // console.log(bannerImageData)
+    }
+
+    useEffect(() => {
+        BannerImageFetchFunc()
+    }, [])
 
     const images = [
         {
@@ -49,26 +62,26 @@ const BannerSlides = () => {
     return (
         <div className="">
             <Fade arrows={false} duration={2000} autoplay={true} infinite={true}>
-                {images?.map((item, index) => (
+                {bannerImageData?.map((item, index) => (
                     <div key={index}>
                         <div
-                            className="bg-top h-[70vh] lg:h-[90vh] bg-cover"
-                            style={{ backgroundImage: `url(${item.url})` }}
+                            className="bg-top h-[70vh] bg-cover"
+                            style={{ backgroundImage: `url(${item.acf.image})` }}
                         >
                             <div className="h-full lg:w-[70%] bg-gradient-to-t from-black md:bg-gradient-to-r md:from-black lg:bg-gradient-to-r lg:from-black">
-                                <div className="h-full lg:w-[70%] lg:pr-72 w-full flex flex-col items-center lg:items-start lg:justify-center justify-end leading-tight px-10 pb-5">
+                                <div className="h-full lg:w-[70%] lg:pr-80 w-full flex flex-col items-center lg:items-start lg:justify-center justify-end px-10 pb-5">
                                     {/* <h2 className=" text-[2.5rem] lg:text-[3rem] font-bold text-[#FFDD95] lg:mb-2">
                                         {item.title}
                                     </h2> */}
-                                    <img src={item.logo} alt={item.title} className="h-[80px] lg:h-[100px]" />
-                                    <div className="hidden lg:flex items-center gap-1 lg:mb-1">
+                                    <img src={item.acf.logo} alt={item.title.rendered} className="h-[80px] lg:h-[100px]" />
+                                    {/* <div className="hidden lg:flex items-center gap-1 lg:mb-1">
                                         <AiFillStar size={25} color="gold" />
                                         <span className="text-[1.1rem] font-sans ">
                                             {item.rating}
                                         </span>
-                                    </div>
-                                    <p className="leading-snug text-center lg:text-left text-[1rem] lg:text-[1.2rem] line-clamp-3 lg:line-clamp-4">
-                                        {item.desc}
+                                    </div> */}
+                                    <p className="leading-snug text-center lg:text-left text-[1rem] lg:text-[1rem] line-clamp-4">
+                                        {item.acf.summary}
                                     </p>
                                     <a
                                         className="border-2 border-[#FFDD95] bg-transparent text-[#FFDD95] transition-all ease-in-out duration-500 font-semibold mt-2 lg:mt-5 px-5 py-2 rounded-xl flex items-center gap-3 hover:bg-[#FFDD95] hover:text-[#000] hover:scale-110 "

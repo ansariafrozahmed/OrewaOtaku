@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import SearchSkeleton from "../components/Skeleton/SearchSkeleton";
 
 const Search = () => {
-    const [searchText, setSearchText] = useState("Jujutsu Kaisen");
+    const [searchText, setSearchText] = useState("Seven Deadly Sins");
     const [searchData, setSearchData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
