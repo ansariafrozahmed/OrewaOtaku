@@ -6,7 +6,7 @@ const Banner01 = () => {
 
     return (
         <div
-            className=" h-[200px] lg:h-[500px] overflow-hidden bg-no-repeat w-full bg-center-left bg-cover mt-5"
+            className=" h-[130px] lg:h-[500px] overflow-hidden bg-no-repeat w-full bg-center-left bg-cover mt-5"
             style={{ backgroundImage: `url(${imagelink})` }}
         >
             {/* <div className="pb-5 h-full w-full bg-gradient-to-t from-slate-300 flex items-end justify-center">
