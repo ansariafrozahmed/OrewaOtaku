@@ -74,3 +74,8 @@ body {
   font-weight: 400;
   margin-bottom: 30px;
 }
+
+svg.ml-1.h-7.w-7 {
+  color: #FFDD95;
+  /* opacity: 1 !important; */
+}

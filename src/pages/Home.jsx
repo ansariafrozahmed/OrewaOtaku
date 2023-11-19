@@ -4,6 +4,7 @@ import TopAiring from "../components/TopAiring/TopAiring";
 import TopChar from "../components/TopChar/TopChar";
 import Banner01 from "../components/Banner01";
 import { motion } from 'framer-motion'
+import NewBannerSlide from '../components/NewBannerSlide'
 import Footer from "../components/HeaderFooter/Footer";
 
 const Home = () => {
@@ -16,7 +17,8 @@ const Home = () => {
             transition={{ type: "spring", duration: 0.5 }}
         >
             {/* <SocialMedia /> */}
-            <BannerSlides />
+            <NewBannerSlide />
+            {/* <BannerSlides /> */}
             <TopAiring />
             <TopChar />
             <Banner01 />

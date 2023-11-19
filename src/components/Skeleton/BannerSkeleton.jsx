@@ -3,7 +3,7 @@ import Skeleton from 'react-loading-skeleton'
 
 const BannerSkeleton = () => {
     return (
-        <div className='h-[70vh] w-full'>
+        <div className='h-[80vh] w-full'>
             <Skeleton className='h-full w-full' />
         </div>
     )
