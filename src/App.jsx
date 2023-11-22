@@ -8,6 +8,7 @@ import Anime from './pages/Anime'
 import Manga from './pages/Manga'
 import Genre from './pages/Genre'
 import { AnimatePresence } from 'framer-motion'
+import Footer from './components/HeaderFooter/Footer'
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='/genre' element={<Genre />} />
         <Route path='/*' element={<Home />} />
       </Routes>
+      <Footer />
     </AnimatePresence>
   )
 }

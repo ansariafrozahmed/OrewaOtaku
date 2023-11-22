@@ -22,7 +22,7 @@ const Home = () => {
             <TopAiring />
             <TopChar />
             <Banner01 />
-            <Footer />
+            {/* <Footer /> */}
         </motion.div>
     );
 };
