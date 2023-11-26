@@ -33,7 +33,7 @@ const NewBannerSlide = () => {
                 {isBannerLoading ? (
                     <BannerSkeleton />
                 ) : (
-                    <div className="h-[70vh] lg:h-[80vh] w-full">
+                    <div className="h-[60vh] lg:h-[80vh] w-full">
                         <Carousel
                             autoplay={true}
                             loop={true}
