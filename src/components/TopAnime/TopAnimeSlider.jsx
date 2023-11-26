@@ -50,7 +50,7 @@ const TopAnimeSlider = () => {
                                 spaceBetween={10}
                                 freeMode={true}
                                 modules={[FreeMode, Navigation]}
-                                className="mySwiper px-5 "
+                                className="mySwiper px-3 lg:px-5"
                                 slidesPerView={2}
                                 navigation={{
                                     nextEl: '.swiper-button-next',
@@ -71,10 +71,10 @@ const TopAnimeSlider = () => {
                                         slidesPerView: 3.5,
                                     },
                                     400: {
-                                        slidesPerView: 2.2,
+                                        slidesPerView: 2.1,
                                     },
                                     300: {
-                                        slidesPerView: 2.2,
+                                        slidesPerView: 2.1,
                                     },
                                 }}
                             >

@@ -5,7 +5,7 @@ const TopMangaSection = () => {
 
     return (
         <div className='py-10 bg-gradient-to-b from-[#181408]'>
-            <div className="px-5">
+            <div className="px-3 lg:px-5">
                 <div className='flex'>
                     <h2 className='text-[2.3rem] font-bold'>Popular</h2>
                     <h2 className='text-[2.3rem] font-bold text-[#FFDD95]'>Manga</h2>

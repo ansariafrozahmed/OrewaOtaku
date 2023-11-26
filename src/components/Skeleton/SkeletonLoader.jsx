@@ -53,7 +53,7 @@ const SkeletonLoader = () => {
                     spaceBetween={10}
                     freeMode={true}
                     modules={[FreeMode]}
-                    className="mySwiper px-5 "
+                    className="mySwiper px-3 lg:px-5"
                     slidesPerView={2}
                     breakpoints={{
                         // when window width is >= 1200px (desktop)
@@ -70,10 +70,10 @@ const SkeletonLoader = () => {
                             slidesPerView: 3.5,
                         },
                         400: {
-                            slidesPerView: 2.2,
+                            slidesPerView: 2.1,
                         },
                         300: {
-                            slidesPerView: 2.2,
+                            slidesPerView: 2.1,
                         },
                     }}
                 >
