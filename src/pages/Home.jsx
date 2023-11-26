@@ -1,11 +1,9 @@
 import React from "react";
-import BannerSlides from "../components/BannerSlides";
-import TopAiring from "../components/TopAiring/TopAiring";
-import TopChar from "../components/TopChar/TopChar";
 import Banner01 from "../components/Banner01";
 import { motion } from 'framer-motion'
 import NewBannerSlide from '../components/NewBannerSlide'
-import Footer from "../components/HeaderFooter/Footer";
+import TopAnimeSection from "../components/TopAnime/TopAnimeSection";
+import TopMangaSection from "../components/TopManga/TopMangaSection";
 
 const Home = () => {
     return (
@@ -18,11 +16,9 @@ const Home = () => {
         >
             {/* <SocialMedia /> */}
             <NewBannerSlide />
-            {/* <BannerSlides /> */}
-            <TopAiring />
-            <TopChar />
+            <TopAnimeSection />
+            <TopMangaSection />
             <Banner01 />
-            {/* <Footer /> */}
         </motion.div>
     );
 };

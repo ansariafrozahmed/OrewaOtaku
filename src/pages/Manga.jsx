@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const Manga = () => {
     return (
@@ -8,8 +8,10 @@ const Manga = () => {
             animate={{ scale: 1, opacity: 1 }}
             // exit={{ scale: 0.5, opacity: 0 }}
             transition={{ type: "spring", duration: 0.5 }}
-        >Manga</motion.div>
-    )
-}
+        >
+            Manga
+        </motion.div>
+    );
+};
 
-export default Manga
+export default Manga;

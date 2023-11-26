@@ -51,8 +51,8 @@ const NewBannerSlide = () => {
                                 </div>
                             )}
                         >
-                            {bannerImageData?.map((item) => (
-                                <div className="relative h-full w-full" key={item.id}>
+                            {bannerImageData?.map((item, index) => (
+                                <div className="relative h-full w-full" key={index}>
                                     <img
                                         src={item.acf.image}
                                         alt="image 1"
