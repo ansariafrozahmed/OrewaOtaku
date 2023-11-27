@@ -4,7 +4,6 @@ module.exports = withMT({
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
     extend: {
@@ -13,5 +12,5 @@ module.exports = withMT({
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [],
 });
