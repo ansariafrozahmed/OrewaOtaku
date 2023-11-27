@@ -23,7 +23,7 @@ const NewBannerSlide = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             BannerImageFetchFunc();
-        }, 1000);
+        }, 100);
         return () => clearTimeout(timer);
     }, []);
 

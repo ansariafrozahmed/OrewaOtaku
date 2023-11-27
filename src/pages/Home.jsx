@@ -18,7 +18,7 @@ const Home = () => {
             <NewBannerSlide />
             <TopAnimeSection />
             <TopMangaSection />
-            <Banner01 />
+            {/* <Banner01 /> */}
         </motion.div>
     );
 };

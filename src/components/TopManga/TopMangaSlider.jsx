@@ -23,7 +23,7 @@ const TopAnimeSlider = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const TopAnime = async () => {
-        const res = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity&limit=24')
+        const res = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity&limit=25')
         const data = await res.json()
         const final = data.data
         setTopAnimeData(final)
@@ -33,7 +33,7 @@ const TopAnimeSlider = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             TopAnime()
-        }, 2000)
+        }, 100)
         return () => clearTimeout(timer)
     }, [])
 
@@ -80,15 +80,17 @@ const TopAnimeSlider = () => {
                             >
                                 {topAnimeData?.map((item, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className="w-full">
-                                            <div className="aspect-[3/4.5]">
-                                                <img className="h-full w-full" src={item.images.webp.large_image_url} alt={item.title} />
+                                        <Link to={`/manga/details/${item.mal_id}`} key={index}>
+                                            <div className="w-full">
+                                                <div className="aspect-[3/4.5]">
+                                                    <img className="h-full w-full" src={item.images.webp.large_image_url} alt={item.title} />
+                                                </div>
+                                                <div className="py-1">
+                                                    <h2 className="line-clamp-1">{item.title}</h2>
+                                                    <p className="text-[0.9rem] text-[#8b8b8b]">{item.type}</p>
+                                                </div>
                                             </div>
-                                            <div className="py-1">
-                                                <h2 className="line-clamp-1">{item.title}</h2>
-                                                <p className="text-[0.9rem] text-[#8b8b8b]">{item.type}</p>
-                                            </div>
-                                        </div>
+                                        </Link>
                                     </SwiperSlide>
                                 ))}
                                 <div className="swiper-button-next text-white"></div>

@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import SearchCardSection from "../components/SearchCardSection";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { motion } from "framer-motion";
 import SearchSkeleton from "../components/Skeleton/SearchSkeleton";
+import SearchMangaCard from "../components/SearchCard/SearchMangaCard";
 
-const Search = () => {
-    const [searchText, setSearchText] = useState("Seven Deadly Sins");
+const SearchManga = () => {
+    const [searchText, setSearchText] = useState("Naruto");
     const [searchData, setSearchData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     const searchApiFunc = async (query) => {
         try {
             const searchUrl = await fetch(
-                `https://api.jikan.moe/v4/anime?q=${query}&limit=10`
+                `https://api.jikan.moe/v4/manga?q=${query}&limit=10`
             );
             const searchResponse = await searchUrl.json();
             const finalData = searchResponse.data;
@@ -54,7 +54,7 @@ const Search = () => {
                     name="search"
                     onKeyUp={inputSearch}
                     id="search"
-                    placeholder="Search Here..."
+                    placeholder="Search Your Manga Here..."
                     className="text-[#FFF] font-medium tracking-wide text-[1rem] outline-none h-10 lg:w-[40%] w-[80%] bg-transparent border-b-2 border-[#FFDD95]"
                 />
             </div>
@@ -69,7 +69,7 @@ const Search = () => {
                             (
                                 <div className="flex flex-wrap justify-start gap-[2%] lg:gap-2 mt-5 w-full">
                                     {searchData.map((item, index) => (
-                                        <SearchCardSection key={index} name={item.title} image={item.images.webp.large_image_url} type={item.type} />
+                                        <SearchMangaCard key={index} name={item.title} image={item.images.webp.large_image_url} type={item.type} id={item.mal_id} />
                                     ))}
                                 </div>
                             )
@@ -80,4 +80,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default SearchManga;
