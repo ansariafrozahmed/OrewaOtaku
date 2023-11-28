@@ -58,8 +58,8 @@ const SearchAnime = () => {
                     className="text-[#FFF] font-medium tracking-wide text-[1rem] outline-none h-10 lg:w-[40%] w-[80%] bg-transparent border-b-2 border-[#FFDD95]"
                 />
             </div>
-            <div className="h-auto w-full py-3 lg:py-10 px-5 lg:px-52">
-                <p className="text-[1rem]">Search Results For <span className="text-[#FFDD95] font-bold">{searchText}</span></p>
+            <div className="h-auto w-full py-3 lg:py-10 px-5 lg:px-40">
+                <p className="text-[1rem] text-center">Search Results For <span className="text-[#FFDD95] font-bold">{searchText}</span></p>
                 <SkeletonTheme baseColor="#202020" highlightColor="#444">
                     {
                         isLoading ? (
@@ -67,7 +67,7 @@ const SearchAnime = () => {
                         )
                             :
                             (
-                                <div className="flex flex-wrap justify-start gap-[2%] lg:gap-2 mt-5 w-full">
+                                <div className="flex flex-wrap justify-center gap-3 lg:gap-2 mt-5 w-full">
                                     {searchData.map((item, index) => (
                                         <SearchAnimeCard key={index} name={item.title} image={item.images.webp.large_image_url} type={item.type} id={item.mal_id} />
                                     ))}
