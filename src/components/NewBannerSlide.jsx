@@ -9,7 +9,8 @@ const NewBannerSlide = () => {
     const [isBannerLoading, setIsBannerLoading] = useState(true);
 
     const bannerData = [
-        {
+        {   
+            id:1,
             image:"https://assets-prd.ignimgs.com/2022/08/17/top25animecharacters-blogroll-1660777571580.jpg",
             title: "Death Note",
             desc: "Ever since the release of the innovative NerveGear, gamers from all around the globe have been given the opportunity to experience a completely immersive virtual reality. Sword Art Online (SAO), one of the most recent games on the console, offers a gateway into the wondrous world of Aincrad, a vivid, medieval landscape where users can do anything within the limits of imagination. With the release of this worldwide sensation, gaming has never felt more lifelike.",
@@ -19,6 +20,7 @@ const NewBannerSlide = () => {
 
         },
         {
+            id:2,
             image:"https://img.youtube.com/vi/-tviZNY6CSw/maxresdefault.jpg",
             title: "デスノート",
             desc: "the idyllic fantasy rapidly becomes a brutal nightmare when SAO's creator traps thousands of players inside the game. The \"log-out\" function has been removed, with the only method of escape involving beating all of Aincrad's one hundred increasingly difficult levels. Adding to the struggle, any in-game death becomes permanent, ending the player's life in the real world.",
@@ -27,6 +29,7 @@ const NewBannerSlide = () => {
 
         },
         {
+            id:3,
             image:"https://img.youtube.com/vi/XBNWo25izJ8/maxresdefault.jpg",
             title: "Sword Art Online",
             desc: "Kirigaya was fortunate enough to be a beta-tester for the game, he quickly finds that despite his advantages, he cannot overcome SAO's challenges alone. Teaming up with Asuna Yuuki and other talented players, Kirito makes an effort to face the seemingly insurmountable trials head-on. But with difficult bosses and threatening dark cults impeding his progress,",

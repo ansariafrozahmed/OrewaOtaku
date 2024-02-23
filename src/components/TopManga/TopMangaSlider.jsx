@@ -19,14 +19,14 @@ import SkeletonLoader from "../Skeleton/SkeletonLoader";
 
 const TopAnimeSlider = () => {
 
-    const [topAnimeData, setTopAnimeData] = useState();
+    const [TopMangaData, setTopMangaData] = useState();
     const [isLoading, setIsLoading] = useState(true);
 
     const TopAnime = async () => {
         const res = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity&limit=25')
         const data = await res.json()
         const final = data.data
-        setTopAnimeData(final)
+        setTopMangaData(final)
         setIsLoading(false)
     }
 
@@ -78,7 +78,7 @@ const TopAnimeSlider = () => {
                                     },
                                 }}
                             >
-                                {topAnimeData?.map((item, index) => (
+                                {TopMangaData?.map((item, index) => (
                                     <SwiperSlide key={index}>
                                         <Link to={`/manga/details/${item.mal_id}`} key={index}>
                                             <div className="w-full">
